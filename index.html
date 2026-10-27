@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#080c14" />
+
+  <title>Saleh Hammad — Flutter Developer | Mobile & Desktop Engineering</title>
+  <meta name="description" content="Portfolio of Saleh Hammad, Flutter developer building resilient mobile & desktop applications with Clean Architecture, SQLite FFI, Supabase, and predictable state machines." />
+  <meta name="author" content="Saleh Hammad" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Preconnect to Google Fonts for Ultra-Fast Typography Rendering -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Saleh Hammad — Flutter Developer" />
+  <meta property="og:description" content="Building resilient cross-platform Flutter applications for Mobile & Desktop with Clean Architecture and predictable state." />
+  <meta property="og:site_name" content="Saleh Hammad Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="./public/assets/icons/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Saleh Hammad Flutter Developer Portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Saleh Hammad — Flutter Developer" />
+  <meta name="twitter:description" content="Building resilient cross-platform Flutter applications for Mobile & Desktop." />
+  <meta name="twitter:image" content="./public/assets/icons/og-image.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="./public/assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./public/assets/icons/apple-touch-icon.png" />
+
+  <!-- Theme Script (Zero Flash) -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('theme-preference');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./src/styles/tokens.css" />
+  <link rel="stylesheet" href="./src/styles/base.css" />
+  <link rel="stylesheet" href="./src/styles/layout.css" />
+  <link rel="stylesheet" href="./src/styles/components.css" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Saleh Hammad",
+    "jobTitle": "Flutter Developer",
+    "url": "https://hammadsaleh631-lgtm.github.io",
+    "sameAs": [
+      "https://github.com/hammadsaleh631-lgtm",
+      "https://hammadsaleh631-lgtm.github.io/elmam-landing/"
+    ],
+    "description": "Flutter developer specializing in Clean Architecture, BLoC/Cubit state machines, SQLite FFI local persistence, and offline-first cloud synchronization.",
+    "knowsAbout": [
+      "Flutter Mobile & Desktop",
+      "Dart",
+      "BLoC & Cubit",
+      "Clean Architecture",
+      "SQLite / sqflite_common_ffi",
+      "Supabase & PostgreSQL",
+      "Firebase Cloud Services",
+      "Cross-Platform Engineering"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="brand-link" aria-label="Saleh Hammad — Home">
+          <img src="./public/assets/icons/favicon.svg" alt="Saleh Hammad Monogram" class="brand-logo" width="36" height="36" />
+          <span>Saleh Hammad</span>
+        </a>
+
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="#work" class="nav-link">Projects</a></li>
+            <li><a href="#architecture" class="nav-link">Architecture</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#workflow" class="nav-link">Workflow</a></li>
+            <li><a href="#ai-philosophy" class="nav-link">Engineering Rigor</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="https://github.com/hammadsaleh631-lgtm" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="GitHub Profile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme">
+            <!-- Dynamic Icon -->
+          </button>
+
+          <button id="mobile-menu-toggle" class="mobile-nav-toggle" aria-expanded="false" aria-controls="mobile-menu-drawer" aria-label="Toggle navigation menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu-drawer" class="mobile-menu-drawer" role="region" aria-label="Mobile Navigation">
+      <ul class="mobile-nav-links">
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#architecture">Architecture & State</a></li>
+        <li><a href="#skills">Skills & Evidence</a></li>
+        <li><a href="#workflow">Engineering Workflow</a></li>
+        <li><a href="#ai-philosophy">AI & Rigor</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://github.com/hammadsaleh631-lgtm" target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-wrapper" aria-labelledby="hero-heading">
+      <div class="hero-glow-backdrop" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <!-- Dynamically populated avatar & metadata -->
+            <div id="hero-profile-area"></div>
+
+            <h1 id="hero-heading" class="hero-title">
+              Flutter developer who <span class="text-gradient">understands the code</span> he builds.
+            </h1>
+
+            <p class="hero-subtitle">
+              I build cross-platform mobile and desktop applications in Dart. My work focuses on Clean Architecture, deterministic state machines, and resilient data synchronization between devices and backends.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#work" class="btn btn-primary">
+                <span>Explore Verified Projects</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary" data-copy="contact@salehhammad.dev" aria-label="Copy contact email">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copy Email</span>
+              </button>
+            </div>
+
+            <div class="hero-proof-bar">
+              <div>
+                <div class="proof-item-label">Core Specialization</div>
+                <div class="proof-item-value">Flutter Mobile & Desktop</div>
+              </div>
+              <div>
+                <div class="proof-item-label">State Pattern</div>
+                <div class="proof-item-value">BLoC / Cubit</div>
+              </div>
+              <div>
+                <div class="proof-item-label">Persistence</div>
+                <div class="proof-item-value">SQLite FFI & Supabase</div>
+              </div>
+              <div>
+                <div class="proof-item-label">Location</div>
+                <div class="proof-item-value">Algeria (UTC+1)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Architecture Blueprint Card -->
+          <div>
+            <div class="architecture-card" role="region" aria-label="System Architecture Flow">
+              <div class="architecture-card-header">
+                <div>
+                  <strong style="font-size: var(--text-sm); color: var(--text-primary);">Deterministic State Contract</strong>
+                  <div style="font-size: var(--text-xs); color: var(--text-muted);">Unidirectional Reactive Flow</div>
+                </div>
+                <span class="architecture-tag">CLEAN ARCH</span>
+              </div>
+
+              <div class="blueprint-flow">
+                <div class="blueprint-node">
+                  <span>UI Presentation (Flutter Widgets)</span>
+                  <span style="color: var(--accent-cyan); font-weight: 600;">reactive</span>
+                </div>
+                <div class="blueprint-connector">▼ emits intents / events</div>
+                <div class="blueprint-node">
+                  <span>Business Logic (Bloc / Cubit)</span>
+                  <span style="color: var(--status-prototype-text); font-weight: 600;">immutable states</span>
+                </div>
+                <div class="blueprint-connector">▼ executes use cases</div>
+                <div class="blueprint-node">
+                  <span>Domain Interactors & Repositories</span>
+                  <span style="color: var(--status-active-text); font-weight: 600;">pure dart</span>
+                </div>
+                <div class="blueprint-connector">▼ persists / queries</div>
+                <div class="blueprint-node">
+                  <span>Data Sources (SQLite FFI / Supabase)</span>
+                  <span style="color: var(--accent-teal); font-weight: 600;">sync & cache</span>
+                </div>
+              </div>
+
+              <div style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--text-muted); line-height: 1.5;">
+                <strong style="color: var(--text-primary);">Engineering Standard:</strong> UI never touches raw SQL or HTTP endpoints directly. Every state mutation is type-safe and deterministic.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="work" class="section" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Verified Work</div>
+          <h2 id="work-heading" class="section-title">Case Studies & Real Codebases</h2>
+          <p class="section-intro">
+            Every project listed below represents real engineering work across monorepos, local-first desktop workstations, and cloud platforms. No fabricated statistics or vanity metrics.
+          </p>
+        </div>
+
+        <!-- Project Filter Bar -->
+        <div class="project-filter-bar" role="toolbar" aria-label="Filter projects by category">
+          <button class="filter-btn is-active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="mobile">Mobile (Flutter & Cloud)</button>
+          <button class="filter-btn" data-filter="desktop">Desktop (Windows & Linux)</button>
+        </div>
+
+        <!-- Projects Container -->
+        <div id="projects-list" class="projects-container">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Architecture & State Explorer Section -->
+    <section id="architecture" class="section" aria-labelledby="architecture-heading" style="background-color: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Interactive Deep Dive</div>
+          <h2 id="architecture-heading" class="section-title">Architecture & State Machine Explorer</h2>
+          <p class="section-intro">
+            Inspect the underlying state management strategies, persistence schemas, and platform integration patterns used across my Flutter applications.
+          </p>
+        </div>
+
+        <div class="inspector-card">
+          <div class="inspector-tabs" role="tablist" aria-label="Architecture deep dives">
+            <button class="inspector-tab is-active" data-target="tab-elmam" role="tab" aria-selected="true" id="tab-btn-elmam">
+              Elmam Monorepo (Teacher, Student & Supabase)
+            </button>
+            <button class="inspector-tab" data-target="tab-veterp" role="tab" aria-selected="false" id="tab-btn-veterp">
+              VetERP (Local SQLite FFI & GoRouter Shell)
+            </button>
+            <button class="inspector-tab" data-target="tab-baconhands" role="tab" aria-selected="false" id="tab-btn-baconhands">
+              BacOnHands (Hardware Video & Windows Fluent)
+            </button>
+          </div>
+
+          <div class="inspector-body">
+            <!-- Elmam Pane -->
+            <div id="tab-elmam" class="inspector-pane is-active" role="tabpanel" aria-labelledby="tab-btn-elmam">
+              <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Elmam: Monorepo Architecture & Offline-First Synchronization</h3>
+              <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--space-4);">
+                Engineered as an enterprise monorepo uniting dedicated Teacher and Student Flutter apps around a shared domain package (`eduapp_shared`) and a Supabase backend guarded by Row Level Security.
+              </p>
+
+              <div class="state-machine-grid">
+                <div class="state-node">
+                  <div class="state-node-title">01. Monorepo Shared Package</div>
+                  <div class="state-node-desc">
+                    Extracted AppDatabase V11 (Drift/SQLite) and domain repositories into `eduapp_shared` for 100% type-safe parity between Teacher and Student apps.
+                  </div>
+                </div>
+                <div class="state-node">
+                  <div class="state-node-title">02. 7 Serverless Edge Functions</div>
+                  <div class="state-node-desc">
+                    Custom TypeScript Edge Functions handle device registration, group enrollment, student snapshots, and QR-based live attendance verification.
+                  </div>
+                </div>
+                <div class="state-node">
+                  <div class="state-node-title">03. Row Level Security (RLS)</div>
+                  <div class="state-node-desc">
+                    Strict PostgreSQL policies ensure teachers and students can only access data belonging to their verified enrolled cohorts.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- VetERP Pane -->
+            <div id="tab-veterp" class="inspector-pane" role="tabpanel" aria-labelledby="tab-btn-veterp">
+              <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-2);">VetERP: Local-First Desktop Clinic Management</h3>
+              <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--space-4);">
+                Desktop ERP designed for Windows and Linux veterinary clinics. Local SQLite FFI database guarantees zero cloud dependency for sensitive medical records.
+              </p>
+
+              <div class="state-machine-grid">
+                <div class="state-node">
+                  <div class="state-node-title">01. SQLite C-Level FFI</div>
+                  <div class="state-node-desc">
+                    Employs sqflite_common_ffi for high-speed local relational queries across 7 normalized tables with zero cloud dependency.
+                  </div>
+                </div>
+                <div class="state-node">
+                  <div class="state-node-title">02. Persistent Master Shell</div>
+                  <div class="state-node-desc">
+                    GoRouter ShellRoute maintains persistent desktop state, keeping active clinical treatment drafts open while browsing customer histories.
+                  </div>
+                </div>
+                <div class="state-node">
+                  <div class="state-node-title">03. Automated Vault Backup</div>
+                  <div class="state-node-desc">
+                    Built-in backup snapshot generator enabling clinics to archive and restore their entire medical history to external drives.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BacOnHands Pane -->
+            <div id="tab-baconhands" class="inspector-pane" role="tabpanel" aria-labelledby="tab-btn-baconhands">
+              <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-2);">BacOnHands: Hardware-Accelerated Offline Educational Desktop</h3>
+              <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--space-4);">
+                Designed as a standalone offline desktop application for Algerian Baccalaureate students, combining Microsoft Fluent UI styling with native C libraries.
+              </p>
+
+              <div class="state-machine-grid">
+                <div class="state-node">
+                  <div class="state-node-title">01. Hardware Video (libmpv)</div>
+                  <div class="state-node-desc">
+                    Integrates MediaKit with native DirectX GPU acceleration to play revision lectures smoothly on low-spec student laptops.
+                  </div>
+                </div>
+                <div class="state-node">
+                  <div class="state-node-title">02. LaTeX Math Typesetting</div>
+                  <div class="state-node-desc">
+                    Renders complex mathematical and physical curriculum formulas with full scientific typesetting precision.
+                  </div>
+                </div>
+                <div class="state-node">
+                  <div class="state-node-title">03. Desktop Window Controls</div>
+                  <div class="state-node-desc">
+                    Custom window chrome, DPI scaling, and viewport constraints via flutter_windowmanager for a native Windows 11 experience.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Philosophy & Human Rigor Section -->
+    <section id="ai-philosophy" class="section" aria-labelledby="ai-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Engineering Discipline</div>
+          <h2 id="ai-heading" class="section-title">AI as an Efficiency Multiplier, Not a Proxy for Judgment</h2>
+          <p class="section-intro">
+            I use AI tools to increase implementation velocity and explore solutions. But lasting software stability requires human engineering judgment, defensive boundary testing, and architecture discipline.
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          <div class="philosophy-card">
+            <div class="philosophy-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            </div>
+            <h3>Architecture Decoupling</h3>
+            <p>
+              AI can write widgets, but it cannot design domain boundaries. I ensure UI, business logic, and database schemas remain strictly separated so that upgrading backend services never cascades into UI breakage.
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <div class="philosophy-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+            <h3>Edge Case & Async Hardening</h3>
+            <p>
+              AI-generated code frequently overlooks network drops, unhandled Stream subscription leaks, and race conditions. I rigorously audit every async stream, implement retry policies, and verify platform disposal routines.
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <div class="philosophy-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <h3>Root Cause Diagnosis</h3>
+            <p>
+              When a layout overflows or an SQLite lock hangs, guessing doesn't work. I diagnose runtime errors at their root — whether that's an unbounded RenderFlex constraint, an improper FFI isolate call, or dirty state reconciliation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section" aria-labelledby="skills-heading" style="background-color: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Technical Stack</div>
+          <h2 id="skills-heading" class="section-title">Skills & Practical Competencies</h2>
+          <p class="section-intro">
+            A transparent assessment of technologies I use. No arbitrary percentage bars or fake meters — each skill is linked directly to the project where it was applied.
+          </p>
+        </div>
+
+        <div id="skills-categories">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering Workflow Section -->
+    <section id="workflow" class="section" aria-labelledby="workflow-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">How I Work</div>
+          <h2 id="workflow-heading" class="section-title">Turning Requirements Into Reliable Software</h2>
+          <p class="section-intro">
+            How I collaborate with clients to make sound architectural choices, anticipate edge cases, eliminate maintenance risks, and deliver stable Flutter products.
+          </p>
+        </div>
+
+        <div id="workflow-timeline" class="workflow-timeline">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <div style="margin-top: var(--space-12);">
+          <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-6);">Client Protections & Engineering Standards</h3>
+          <div id="client-value-props" class="value-props-grid">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section" aria-labelledby="education-heading" style="background-color: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Academic Background</div>
+          <h2 id="education-heading" class="section-title">Foundations & Scientific Discipline</h2>
+        </div>
+
+        <div class="philosophy-card" style="max-width: 48rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-3); flex-wrap: wrap; gap: var(--space-2);">
+            <div>
+              <h3 style="font-size: var(--text-lg);">Licence: Food Sciences (Agri-Food Technology & Quality Control)</h3>
+              <div style="font-size: var(--text-sm); color: var(--accent-cyan);">University of Djelfa, Algeria</div>
+            </div>
+            <span class="badge badge-neutral">Degree Verified</span>
+          </div>
+          <p style="font-size: var(--text-sm); color: var(--text-secondary); line-height: 1.6;">
+            A rigorous scientific and engineering background in process quality control, laboratory standards, and systematic error tracking. Applied directly to software engineering through structured debugging methodologies, reproducible test plans, and meticulous boundary validation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Action Section -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="section-label">Get in Touch</div>
+            <h2 id="contact-heading" class="contact-card-title">Let's Discuss Your Flutter Application</h2>
+            <p style="font-size: var(--text-base); color: var(--text-secondary); line-height: 1.6;">
+              Whether you need to build a new mobile/desktop application from scratch, refactor an existing Flutter architecture, or implement complex offline database synchronization, I'm here to help.
+            </p>
+
+            <div class="contact-channels-list">
+              <div class="contact-channel-row">
+                <div class="channel-info">
+                  <span class="channel-label">Email Inquiries</span>
+                  <span class="channel-val">contact@salehhammad.dev</span>
+                </div>
+                <button class="copy-btn" data-copy="contact@salehhammad.dev" aria-label="Copy email address to clipboard">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <div class="contact-channel-row">
+                <div class="channel-info">
+                  <span class="channel-label">GitHub Profile</span>
+                  <span class="channel-val">https://github.com/hammadsaleh631-lgtm</span>
+                </div>
+                <a href="https://github.com/hammadsaleh631-lgtm" target="_blank" rel="noopener noreferrer" class="copy-btn" aria-label="Visit GitHub Profile">
+                  <span>Visit Profile ↗</span>
+                </a>
+              </div>
+
+              <div class="contact-channel-row">
+                <div class="channel-info">
+                  <span class="channel-label">Elmam Live Landing</span>
+                  <span class="channel-val">https://hammadsaleh631-lgtm.github.io/elmam-landing/</span>
+                </div>
+                <a href="https://hammadsaleh631-lgtm.github.io/elmam-landing/" target="_blank" rel="noopener noreferrer" class="copy-btn" aria-label="Visit Elmam Landing Page">
+                  <span>Visit Landing ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: var(--space-6); justify-content: center;">
+            <div class="architecture-card">
+              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-2); color: var(--text-primary);">Project Consultation Checklist</h3>
+              <p style="font-size: var(--text-xs); color: var(--text-secondary); margin-bottom: var(--space-4);">
+                When reaching out regarding a new project, having answers to these questions helps expedite technical scoping:
+              </p>
+              <ul style="list-style: none; font-size: var(--text-xs); color: var(--text-secondary); display: flex; flex-direction: column; gap: var(--space-2);">
+                <li>▹ What target platforms are required? (iOS, Android, Windows, Web)</li>
+                <li>▹ Is offline data caching or local database persistence needed?</li>
+                <li>▹ What existing backend or authentication services exist?</li>
+                <li>▹ Are there hard performance or memory budget limits?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-brand-title">Saleh Hammad</div>
+          <p style="font-size: var(--text-sm); color: var(--text-secondary);">
+            Flutter Developer dedicated to clean architecture, reliable state machines, and honest software engineering.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div>
+            <div class="footer-col-title">Navigation</div>
+            <ul class="footer-list">
+              <li><a href="#work">Projects</a></li>
+              <li><a href="#architecture">Architecture</a></li>
+              <li><a href="#skills">Skills Matrix</a></li>
+              <li><a href="#workflow">Engineering Workflow</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Profiles & Work</div>
+            <ul class="footer-list">
+              <li><a href="https://github.com/hammadsaleh631-lgtm" target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a></li>
+              <li><a href="https://hammadsaleh631-lgtm.github.io/elmam-landing/" target="_blank" rel="noopener noreferrer">Elmam Landing ↗</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Saleh Hammad. Zero third-party tracking. Deployed statically on GitHub Pages.</div>
+        <div>Built with Vanilla HTML, CSS & JavaScript. Verified against local codebases.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast-notice" class="toast-notice" role="status" aria-live="polite"></div>
+
+  <!-- Main ES Module -->
+  <script type="module" src="./src/scripts/main.js"></script>
+</body>
+</html>

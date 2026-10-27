@@ -1,0 +1,152 @@
+/**
+ * Design Tokens — Ultra-Modern Developer Portfolio
+ * High-contrast dark and light modes, fluid typography, polished glowing accents.
+ */
+
+:root {
+  /* Color System - Dark Mode (Default: Deep Tech Obsidian & Cyan/Emerald) */
+  --bg-canvas: #080c14;
+  --bg-surface: #0e1422;
+  --bg-card: #121a2d;
+  --bg-card-hover: #16223b;
+  --bg-elevated: #1a2742;
+  --bg-subtle: #223354;
+  --bg-overlay: rgba(8, 12, 20, 0.88);
+
+  --border-dim: rgba(255, 255, 255, 0.06);
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.22);
+  --border-accent: rgba(14, 165, 233, 0.4);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-accent: #38bdf8;
+  --text-inverse: #080c14;
+
+  /* Accent Brand Colors */
+  --accent-cyan: #0ea5e9;
+  --accent-cyan-hover: #38bdf8;
+  --accent-teal: #00d2b8;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-purple: #8b5cf6;
+
+  --accent-gradient: linear-gradient(135deg, #0ea5e9 0%, #00d2b8 100%);
+  --hero-glow: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.18) 0%, rgba(0, 210, 184, 0.05) 50%, transparent 80%);
+
+  /* Status Badges */
+  --status-active-bg: rgba(16, 185, 129, 0.12);
+  --status-active-text: #34d399;
+  --status-active-border: rgba(16, 185, 129, 0.28);
+
+  --status-prototype-bg: rgba(245, 158, 11, 0.12);
+  --status-prototype-text: #fbbf24;
+  --status-prototype-border: rgba(245, 158, 11, 0.28);
+
+  --status-completed-bg: rgba(56, 189, 248, 0.12);
+  --status-completed-text: #38bdf8;
+  --status-completed-border: rgba(56, 189, 248, 0.28);
+
+  /* Code & Technical Blocks */
+  --code-bg: #06090f;
+  --code-border: #1e283b;
+  --code-text: #e2e8f0;
+
+  /* Typography Scale */
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --text-sm: clamp(0.85rem, 0.82rem + 0.2vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.96rem + 0.25vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
+  --text-xl: clamp(1.3rem, 1.22rem + 0.55vw, 1.5rem);
+  --text-2xl: clamp(1.6rem, 1.45rem + 0.85vw, 1.875rem);
+  --text-3xl: clamp(2.1rem, 1.85rem + 1.4vw, 2.65rem);
+  --text-4xl: clamp(2.6rem, 2.2rem + 2.2vw, 3.5rem);
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  --shadow-card-hover: 0 20px 40px -15px rgba(14, 165, 233, 0.15);
+  --shadow-glow: 0 0 35px rgba(14, 165, 233, 0.25);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  --container-max: 1200px;
+}
+
+/* Light Theme Overrides */
+html[data-theme="light"] {
+  --bg-canvas: #f6f8fb;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-elevated: #f1f5f9;
+  --bg-subtle: #e2e8f0;
+  --bg-overlay: rgba(246, 248, 251, 0.92);
+
+  --border-dim: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --border-strong: #94a3b8;
+  --border-accent: rgba(2, 132, 199, 0.35);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-accent: #0284c7;
+  --text-inverse: #ffffff;
+
+  --accent-cyan: #0284c7;
+  --accent-cyan-hover: #0369a1;
+  --accent-teal: #059669;
+
+  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #059669 100%);
+  --hero-glow: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.12) 0%, rgba(5, 150, 105, 0.04) 50%, transparent 80%);
+
+  --status-active-bg: rgba(5, 150, 105, 0.1);
+  --status-active-text: #059669;
+  --status-active-border: rgba(5, 150, 105, 0.25);
+
+  --status-prototype-bg: rgba(217, 119, 6, 0.1);
+  --status-prototype-text: #d97706;
+  --status-prototype-border: rgba(217, 119, 6, 0.25);
+
+  --status-completed-bg: rgba(2, 132, 199, 0.1);
+  --status-completed-text: #0284c7;
+  --status-completed-border: rgba(2, 132, 199, 0.25);
+
+  --code-bg: #f8fafc;
+  --code-border: #e2e8f0;
+  --code-text: #1e293b;
+
+  --shadow-subtle: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --shadow-card: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+  --shadow-card-hover: 0 20px 40px -15px rgba(2, 132, 199, 0.12);
+  --shadow-glow: 0 0 30px rgba(2, 132, 199, 0.1);
+}
