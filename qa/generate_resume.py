@@ -17,7 +17,7 @@ html_content = """<!DOCTYPE html>
 <style>
   @page {
     size: A4;
-    margin: 12mm 15mm;
+    margin: 10mm 14mm;
   }
   * {
     box-sizing: border-box;
@@ -28,27 +28,27 @@ html_content = """<!DOCTYPE html>
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: #1e293b;
     background: #ffffff;
-    font-size: 9.5pt;
-    line-height: 1.45;
+    font-size: 9pt;
+    line-height: 1.4;
   }
   .header {
     border-bottom: 2px solid #0284c7;
-    padding-bottom: 8px;
-    margin-bottom: 12px;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
   }
   .name {
-    font-size: 22pt;
+    font-size: 21pt;
     font-weight: 800;
     color: #0f172a;
     letter-spacing: -0.5px;
     text-transform: uppercase;
   }
   .headline {
-    font-size: 11pt;
+    font-size: 10.5pt;
     font-weight: 600;
     color: #0284c7;
     margin-top: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
   .contact-bar {
     font-size: 8.5pt;
@@ -60,34 +60,34 @@ html_content = """<!DOCTYPE html>
   .contact-bar a {
     color: #0284c7;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
   }
   
   .section {
-    margin-bottom: 11px;
+    margin-bottom: 9px;
   }
   .section-title {
-    font-size: 9.8pt;
+    font-size: 9.5pt;
     font-weight: 800;
     color: #0f172a;
     text-transform: uppercase;
     letter-spacing: 0.8px;
     border-bottom: 1px solid #cbd5e1;
-    padding-bottom: 3px;
-    margin-bottom: 6px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
   }
   
   .summary {
-    font-size: 8.9pt;
+    font-size: 8.7pt;
     color: #334155;
     text-align: justify;
   }
 
   .skills-grid {
     display: grid;
-    grid-template-columns: 145px 1fr;
-    row-gap: 4px;
-    font-size: 8.7pt;
+    grid-template-columns: 140px 1fr;
+    row-gap: 3px;
+    font-size: 8.5pt;
   }
   .skill-category {
     font-weight: 700;
@@ -98,7 +98,7 @@ html_content = """<!DOCTYPE html>
   }
   
   .project-item {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
   }
   .project-header {
     display: flex;
@@ -107,35 +107,35 @@ html_content = """<!DOCTYPE html>
     margin-bottom: 2px;
   }
   .project-title {
-    font-size: 9.6pt;
+    font-size: 9.3pt;
     font-weight: 700;
     color: #0f172a;
   }
   .project-role {
-    font-size: 8.5pt;
+    font-size: 8.3pt;
     color: #0284c7;
     font-weight: 600;
   }
   .project-meta {
-    font-size: 8pt;
+    font-size: 7.8pt;
     color: #64748b;
   }
   .project-desc {
-    font-size: 8.7pt;
+    font-size: 8.5pt;
     color: #334155;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
   .project-bullets {
     list-style-type: square;
-    margin-left: 16px;
-    font-size: 8.5pt;
+    margin-left: 15px;
+    font-size: 8.3pt;
     color: #334155;
   }
   .project-bullets li {
-    margin-bottom: 2px;
+    margin-bottom: 1.5px;
   }
   .project-tech {
-    font-size: 8pt;
+    font-size: 7.8pt;
     color: #475569;
     font-style: italic;
     margin-top: 2px;
@@ -144,7 +144,7 @@ html_content = """<!DOCTYPE html>
   .education-block {
     display: flex;
     justify-content: space-between;
-    font-size: 8.9pt;
+    font-size: 8.7pt;
   }
   .edu-degree {
     font-weight: 700;
@@ -152,10 +152,10 @@ html_content = """<!DOCTYPE html>
   }
   .edu-school {
     color: #475569;
-    font-size: 8.5pt;
+    font-size: 8.3pt;
   }
   .edu-note {
-    font-size: 8.3pt;
+    font-size: 8pt;
     color: #64748b;
     margin-top: 2px;
   }
@@ -167,8 +167,8 @@ html_content = """<!DOCTYPE html>
     <div class="name">Saleh Hammad</div>
     <div class="headline">Flutter Developer &bull; Mobile & Desktop Software Engineer</div>
     <div class="contact-bar">
-      <span>Djelfa, Algeria (UTC+1) &bull; Open to Remote & Relocation</span>
-      <span>Email: <a href="mailto:contact@salehhammad.dev">contact@salehhammad.dev</a></span>
+      <span>Djelfa, Algeria (UTC+1) &bull; Open to Remote & Full-Time</span>
+      <span>Email: <a href="mailto:hammadsaleh631@gmail.com">hammadsaleh631@gmail.com</a></span>
       <span>GitHub: <a href="https://github.com/hammadsaleh631-lgtm">github.com/hammadsaleh631-lgtm</a></span>
       <span>Portfolio: <a href="https://hammadsaleh631-lgtm.github.io">hammadsaleh631-lgtm.github.io</a></span>
     </div>
@@ -177,7 +177,7 @@ html_content = """<!DOCTYPE html>
   <div class="section">
     <div class="section-title">Professional Summary</div>
     <p class="summary">
-      Engineering-driven Flutter Developer with proven experience architecting resilient, production-ready mobile and desktop applications. Proficient in Clean Architecture, deterministic state machines (BLoC/Cubit), offline-first local persistence (Drift / SQLite FFI), and enterprise monorepo structures. Skilled in connecting client apps with backend services (Supabase PostgreSQL, TypeScript Edge Functions, Row Level Security, and Firebase). Strong focus on code maintainability, memory safety, defensive async streams, and systematic quality assurance.
+      Engineering-driven Flutter Developer specializing in building robust, production-grade cross-platform applications for Mobile and Desktop environments. Expertise in Clean Architecture, deterministic state machines (BLoC/Cubit), offline-first local persistence (Drift / SQLite FFI), and enterprise monorepo architectures. Skilled in integrating resilient backends (Supabase PostgreSQL, TypeScript Edge Functions, Row Level Security, and Firebase). Dedicated to zero-defect code quality, memory safety, defensive async handling, and systematic automated verification.
     </p>
   </div>
 
@@ -185,22 +185,22 @@ html_content = """<!DOCTYPE html>
     <div class="section-title">Technical Competencies</div>
     <div class="skills-grid">
       <div class="skill-category">Frameworks & UI:</div>
-      <div class="skill-items">Flutter (Mobile Android/iOS, Desktop Windows/Linux), Dart 3, Fluent UI, Custom Painters, Responsive Layouts.</div>
+      <div class="skill-items">Flutter (Android, iOS, Windows, Linux), Dart 3, Fluent UI, Responsive Layouts, Custom Painters.</div>
       
       <div class="skill-category">Architecture & State:</div>
-      <div class="skill-items">Clean Architecture (Presentation, Domain, Data layers), BLoC / Cubit, Repository Pattern, Dependency Injection (get_it).</div>
+      <div class="skill-items">Clean Architecture (Presentation, Domain, Data), BLoC / Cubit, Repository Pattern, Dependency Injection.</div>
       
-      <div class="skill-category">Persistence & Database:</div>
-      <div class="skill-items">SQLite FFI (sqflite_common_ffi), Drift / SQLite V11, Shared Preferences, Local Vault Backups, Non-destructive migrations.</div>
+      <div class="skill-category">Persistence & Data:</div>
+      <div class="skill-items">SQLite FFI (sqflite_common_ffi), Drift / SQLite V11, Local Vault Backups, Non-destructive migrations.</div>
       
-      <div class="skill-category">Cloud & Backend:</div>
-      <div class="skill-items">Supabase (Auth, PostgreSQL, Row Level Security RLS), Serverless Edge Functions (TypeScript), Firebase (Auth, Firestore, Cloud Messaging).</div>
+      <div class="skill-category">Cloud & APIs:</div>
+      <div class="skill-items">Supabase (Auth, PostgreSQL, Row Level Security RLS), Serverless Edge Functions (TypeScript), Firebase Suite.</div>
       
-      <div class="skill-category">Hardware & Systems:</div>
-      <div class="skill-items">MediaKit (libmpv Hardware Video Acceleration), QR Code scanning, Thermal Receipt generation, Barcode scanners, Desktop Window Manager.</div>
+      <div class="skill-category">Hardware & Desktop:</div>
+      <div class="skill-items">MediaKit (libmpv Hardware Video Acceleration), QR Code scanning, Thermal Receipt generation, Window Manager.</div>
       
       <div class="skill-category">Tooling & Rigor:</div>
-      <div class="skill-items">Git Monorepos, Static Code Analysis, Memory Leak Elimination, Defensive Async Streams, Automated QA verification.</div>
+      <div class="skill-items">Git Monorepos, Static Analysis, Memory Leak Elimination, Defensive Async Streams, Automated QA scripts.</div>
     </div>
   </div>
 
@@ -214,21 +214,40 @@ html_content = """<!DOCTYPE html>
           <span class="project-title">Elmam Educational Management System</span>
           <span class="project-role"> — Full-Stack Flutter Monorepo</span>
         </div>
-        <div class="project-meta">Active Production Monorepo &bull; Live Landing Page Online</div>
+        <div class="project-meta">Production-Grade Monorepo &bull; Live Landing Page Online</div>
       </div>
       <p class="project-desc">
-        Comprehensive educational management ecosystem uniting dedicated Teacher and Student Flutter apps around a shared domain package (<code>eduapp_shared</code>) and a Supabase backend.
+        Integrated educational management ecosystem uniting dedicated Teacher and Student Flutter apps around a shared domain package (<code>eduapp_shared</code>) and a Supabase backend.
       </p>
       <ul class="project-bullets">
-        <li>Architected an enterprise monorepo eliminating code duplication and ensuring 100% type-safe parity between Teacher and Student applications.</li>
-        <li>Implemented offline-first SQLite database (Drift V11) with resilient non-destructive cloud synchronization during spotty network conditions.</li>
-        <li>Engineered instant QR-code live session check-ins, student enrollment rosters, course timetables, and lecture uploads.</li>
-        <li>Developed 7 serverless TypeScript Edge Functions on Supabase with strict Row Level Security (RLS) and integrated BaridiMob payment record tracking.</li>
+        <li>Architected an enterprise monorepo eliminating code duplication with 100% type-safe parity between Teacher and Student applications.</li>
+        <li>Implemented offline-first SQLite database (Drift V11) with non-destructive cloud synchronization during spotty internet access.</li>
+        <li>Engineered instant QR-code live session check-ins, automated student enrollment rosters, course timetables, and lecture uploads.</li>
+        <li>Developed 7 serverless TypeScript Edge Functions on Supabase with strict Row Level Security (RLS) and BaridiMob payment tracking.</li>
       </ul>
       <div class="project-tech">Technologies: Flutter, Dart, Supabase, PostgreSQL, Drift/SQLite, TypeScript Edge Functions, BLoC, QR Attendance, BaridiMob.</div>
     </div>
 
-    <!-- Project 2: VetERP -->
+    <!-- Project 2: School ERP -->
+    <div class="project-item">
+      <div class="project-header">
+        <div>
+          <span class="project-title">School ERP — Academic Administration Workstation</span>
+          <span class="project-role"> — Flutter Desktop System</span>
+        </div>
+        <div class="project-meta">Desktop (Windows & Linux)</div>
+      </div>
+      <p class="project-desc">
+        Comprehensive academic management workstation engineered for educational institutions, handling student dossiers, grade tracking, tuition payments, and staff schedules.
+      </p>
+      <ul class="project-bullets">
+        <li>Built resilient multi-view desktop dashboard with keyboard shortcuts and high-density data entry for administrative staff.</li>
+        <li>Implemented normalized local database schemas with instant search, reporting filters, and automated audit trails.</li>
+      </ul>
+      <div class="project-tech">Technologies: Flutter Desktop, Dart, Clean Architecture, BLoC / Cubit, Local Database Persistence, Reporting.</div>
+    </div>
+
+    <!-- Project 3: VetERP -->
     <div class="project-item">
       <div class="project-header">
         <div>
@@ -238,17 +257,16 @@ html_content = """<!DOCTYPE html>
         <div class="project-meta">Desktop (Windows & Linux)</div>
       </div>
       <p class="project-desc">
-        High-reliability offline practice management workstation for veterinary clinics, managing animal clinical histories, treatments, and balance debts.
+        Offline practice management workstation for veterinary clinics, managing animal clinical histories, treatments, and balance debts.
       </p>
       <ul class="project-bullets">
-        <li>Engineered local-first data engine using native C-speed SQLite FFI (<code>sqflite_common_ffi</code>) across 7 normalized relational tables with zero cloud dependency.</li>
-        <li>Designed a persistent multi-view master shell with GoRouter ShellRoute, keeping active patient diagnostic drafts open during navigation.</li>
-        <li>Created automated one-click database vault snapshot backups for zero-downtime clinic disaster recovery.</li>
+        <li>Engineered local-first data engine using native C-speed SQLite FFI (<code>sqflite_common_ffi</code>) across 7 normalized relational tables with zero cloud bills.</li>
+        <li>Designed a persistent multi-view master shell with GoRouter ShellRoute, keeping active diagnostic drafts open during navigation.</li>
       </ul>
-      <div class="project-tech">Technologies: Flutter Desktop, Dart, SQLite FFI, GoRouter, BLoC / Cubit, Hardware Card Scanner.</div>
+      <div class="project-tech">Technologies: Flutter Desktop, Dart, SQLite FFI, GoRouter, BLoC / Cubit, Card Scanner, Vault Backups.</div>
     </div>
 
-    <!-- Project 3: POS Flutter App -->
+    <!-- Project 4: POS Flutter App -->
     <div class="project-item">
       <div class="project-header">
         <div>
@@ -267,7 +285,7 @@ html_content = """<!DOCTYPE html>
       <div class="project-tech">Technologies: Flutter, Dart, BLoC State Management, Barcode Scanner, Receipt Generation, Clean Architecture.</div>
     </div>
 
-    <!-- Project 4: BacOnHands -->
+    <!-- Project 5: BacOnHands -->
     <div class="project-item">
       <div class="project-header">
         <div>
@@ -295,9 +313,9 @@ html_content = """<!DOCTYPE html>
         <div class="edu-school">University of Djelfa, Algeria</div>
         <div class="edu-note">Applied systematic laboratory quality control, defect isolation methodologies, and rigorous error auditing directly to software testing and defensive programming.</div>
       </div>
-      <div style="font-size: 8.5pt; color: #64748b; text-align: right;">
-        <div>Systematic QA & Testing</div>
-        <div>Continuous Verification</div>
+      <div style="font-size: 8pt; color: #64748b; text-align: right;">
+        <div>Graduated &bull; Systematic QA & Testing</div>
+        <div>Zero-Defect Engineering Mindset</div>
       </div>
     </div>
   </div>

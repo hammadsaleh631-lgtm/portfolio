@@ -47,7 +47,7 @@ export const profile = {
   },
 
   contact: {
-    email: "contact@salehhammad.dev",
+    email: "hammadsaleh631@gmail.com",
     github: "https://github.com/hammadsaleh631-lgtm",
     githubUsername: "hammadsaleh631-lgtm",
     linkedin: "https://linkedin.com/in/saleh-hammad",

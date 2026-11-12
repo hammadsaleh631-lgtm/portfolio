@@ -1,6 +1,6 @@
 /**
  * Project Data — Verified against local source code, live deployments, and real screenshots.
- * Evidence: E:\Edu_app\edu_app_project, C:\Users\hamma\Documents\VetERP, pos_flutter_app, and Bac_on_ur_hands.
+ * Evidence: E:\Edu_app\edu_app_project, C:\Users\hamma\Documents\VetERP, pos_flutter_app, School_ERP, and Bac_on_ur_hands.
  */
 
 export const projects = [
@@ -48,6 +48,34 @@ export const projects = [
       {
         src: "./public/assets/images/elmam/elmam_teacher_session.jpg",
         caption: "Teacher App — Active Classroom Session & Attendance"
+      },
+      {
+        src: "./public/assets/images/elmam/elmam_portal_landing.png",
+        caption: "Portal Landing — Web & Mobile Presentation Portal"
+      },
+      {
+        src: "./public/assets/images/elmam/elmam_lesson_detail.png",
+        caption: "Classroom Module — Lecture Content & Attachments"
+      },
+      {
+        src: "./public/assets/images/elmam/elmam_payment_receipt_entry.png",
+        caption: "Payment Ledger — Manual & Digital Receipt Entry"
+      },
+      {
+        src: "./public/assets/images/elmam/elmam_local_student_enrollment.png",
+        caption: "Local Persistence — Direct Offline Student Registration"
+      },
+      {
+        src: "./public/assets/images/elmam/elmam_pending_enrollments.png",
+        caption: "Administration — Pending Join Requests & Approvals"
+      },
+      {
+        src: "./public/assets/images/elmam/elmam_teacher_management.png",
+        caption: "Faculty Hub — Instructor Profile & Assigned Modules"
+      },
+      {
+        src: "./public/assets/images/elmam/elmam_students_attendance_list.jpg",
+        caption: "Class Roster — Student Attendance Tracking"
       }
     ],
     liveUrl: "https://hammadsaleh631-lgtm.github.io/elmam-landing/",
@@ -78,6 +106,61 @@ export const projects = [
     architectureDetails: {
       dataFlow: "Teacher / Student UI ➔ Domain UseCases ➔ eduapp_shared Drift Local DB ➔ Supabase Edge Functions & RLS",
       keyDecision: "Extracted domain logic and local database tables into a shared Dart package (`eduapp_shared`), ensuring 100% type safety and eliminating duplication between teacher and student apps."
+    }
+  },
+  {
+    id: "school-erp",
+    title: "School ERP — Academic Administration Workstation",
+    subtitle: "Desktop Management System for Student Rosters, Schedules & Tuition Ledgers",
+    category: "desktop",
+    categoryLabel: "Desktop Workstation (Windows & Linux)",
+    platform: "Desktop (Windows & Linux)",
+    status: "Active Development",
+    statusType: "active",
+    badge: "Desktop Workstation",
+    logo: null,
+    image: "./public/assets/images/school_erp/school_erp_screen_1.png",
+    screenshots: [
+      {
+        src: "./public/assets/images/school_erp/school_erp_screen_1.png",
+        caption: "Administration Dashboard — Student Rosters & Academic Metrics"
+      },
+      {
+        src: "./public/assets/images/school_erp/school_erp_screen_2.png",
+        caption: "Classroom & Group Manager — Course Scheduling & Enrollments"
+      },
+      {
+        src: "./public/assets/images/school_erp/school_erp_screen_3.png",
+        caption: "Tuition & Financial Ledger — Student Fees & Payment Records"
+      }
+    ],
+    liveUrl: null,
+    liveLabel: null,
+    repository: {
+      isPrivate: true,
+      label: "Private Repository"
+    },
+    summary: "Comprehensive academic workstation engineered for primary and secondary institutions, handling student enrollment, fee collections, attendance rosters, and administrative report generation.",
+    overview: "Built to replace manual paperwork with a high-density, keyboard-friendly desktop workstation. Uses Flutter Desktop and Clean Architecture to handle complex relational data for hundreds of students, class cohorts, and financial fee records with zero cloud dependency.",
+    techStack: [
+      "Flutter Desktop",
+      "Dart",
+      "Clean Architecture",
+      "BLoC / Cubit",
+      "Local Database Persistence",
+      "Financial Ledgers",
+      "Reporting & Exports"
+    ],
+    features: [
+      "High-density desktop user interface with rapid keyboard data entry and search filters",
+      "Complete student dossier management with historical performance and attendance records",
+      "Tuition fee ledger tracking installments, balance debts, and financial summaries",
+      "Classroom schedule and teacher assignment planner with collision prevention",
+      "Automated local database backups for institutional data protection"
+    ],
+    architectureDetails: {
+      dataFlow: "Desktop Shell ➔ Administrative Form Bloc ➔ Local Relational Engine ➔ Print & Export Driver",
+      keyDecision: "Structured administrative workflows around immutable state machines to eliminate partial form submissions and ledger inaccuracies."
     }
   },
   {
@@ -222,6 +305,30 @@ export const projects = [
       {
         src: "./public/assets/images/baconhands/baconhands_screen_4.png",
         caption: "Interactive 3D Revision Flashcards Module"
+      },
+      {
+        src: "./public/assets/images/baconhands/baconhands_screen_5.png",
+        caption: "Subject Curriculum Browser — High-yield Revision Modules"
+      },
+      {
+        src: "./public/assets/images/baconhands/baconhands_screen_6.png",
+        caption: "Video Player Controls & Chapter Navigation"
+      },
+      {
+        src: "./public/assets/images/baconhands/baconhands_screen_7.png",
+        caption: "Exam Question Archive & Step-by-Step Solutions"
+      },
+      {
+        src: "./public/assets/images/baconhands/baconhands_screen_8.png",
+        caption: "Formula Quick-Reference & Scientific Cheatsheet"
+      },
+      {
+        src: "./public/assets/images/baconhands/baconhands_screen_9.png",
+        caption: "Study Progress Tracker & Revision Milestones"
+      },
+      {
+        src: "./public/assets/images/baconhands/baconhands_screen_10.png",
+        caption: "Desktop Settings & Fluent UI Dark/Light Theme Customizer"
       }
     ],
     liveUrl: null,

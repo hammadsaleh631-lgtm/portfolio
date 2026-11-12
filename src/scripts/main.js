@@ -154,15 +154,20 @@ function renderProjects() {
         `;
       }
 
-      // Screenshots Horizontal Gallery (For mobile apps: Elmam and POS)
+      // Screenshots Horizontal Gallery (Responsive: Phone frames for Mobile, Wide frames for Desktop)
       let galleryHtml = "";
       if (proj.screenshots && proj.screenshots.length > 0) {
+        const isDesktop = proj.category === "desktop";
+        const frameClass = isDesktop ? "desktop-mockup-frame" : "phone-mockup-frame";
+        const itemClass = isDesktop ? "screenshot-item screenshot-item-desktop" : "screenshot-item";
+        const imgClass = isDesktop ? "desktop-screenshot-img" : "phone-screenshot-img";
+
         const itemsHtml = proj.screenshots
           .map(
             s => `
-            <div class="screenshot-item">
-              <div class="phone-mockup-frame">
-                <img src="${s.src}" alt="${s.caption}" class="phone-screenshot-img" loading="lazy" />
+            <div class="${itemClass}">
+              <div class="${frameClass}">
+                <img src="${s.src}" alt="${s.caption}" class="${imgClass}" loading="lazy" />
               </div>
               <span class="screenshot-caption">${s.caption}</span>
             </div>`
@@ -171,12 +176,22 @@ function renderProjects() {
 
         galleryHtml = `
           <div class="project-gallery-wrapper">
-            <div class="gallery-label">
-              <span>App Interface Gallery</span>
-              <span>•</span>
-              <span>Live Screenshots</span>
+            <div class="gallery-header-row">
+              <div class="gallery-label">
+                <span>${isDesktop ? "Desktop Workstation Gallery" : "App Interface Gallery"}</span>
+                <span>•</span>
+                <span>${proj.screenshots.length} Screenshots</span>
+              </div>
+              <div class="carousel-nav-controls">
+                <button class="carousel-nav-btn prev" aria-label="Scroll screenshots left" data-target="gallery-${proj.id}">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="carousel-nav-btn next" aria-label="Scroll screenshots right" data-target="gallery-${proj.id}">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
             </div>
-            <div class="screenshots-row">
+            <div class="screenshots-row" id="gallery-${proj.id}">
               ${itemsHtml}
             </div>
           </div>
@@ -197,8 +212,11 @@ function renderProjects() {
         .map(t => `<span class="tech-pill">${t}</span>`)
         .join("");
 
+      const isFeatured = proj.id === "elmam";
+
       return `
-        <article class="project-card" id="project-${proj.id}">
+        <article class="project-card ${isFeatured ? "project-card-featured" : ""}" id="project-${proj.id}">
+          ${isFeatured ? `<div class="featured-ribbon">★ FEATURED CASE STUDY</div>` : ""}
           ${bannerHtml}
           ${galleryHtml}
 
@@ -276,6 +294,17 @@ function renderProjects() {
       `;
     })
     .join("");
+
+  // Attach carousel scroll listeners
+  container.querySelectorAll(".carousel-nav-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.getAttribute("data-target");
+      const targetEl = document.getElementById(targetId);
+      if (!targetEl) return;
+      const scrollAmount = btn.classList.contains("prev") ? -420 : 420;
+      targetEl.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+  });
 }
 
 // Project Filter Setup
@@ -339,6 +368,17 @@ function renderSkills() {
       `;
     })
     .join("");
+
+  // Attach carousel scroll listeners
+  container.querySelectorAll(".carousel-nav-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.getAttribute("data-target");
+      const targetEl = document.getElementById(targetId);
+      if (!targetEl) return;
+      const scrollAmount = btn.classList.contains("prev") ? -420 : 420;
+      targetEl.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+  });
 }
 
 // Render Engineering Workflow
