@@ -51,6 +51,7 @@ export const profile = {
     github: "https://github.com/hammadsaleh631-lgtm",
     githubUsername: "hammadsaleh631-lgtm",
     linkedin: "https://linkedin.com/in/saleh-hammad",
+    resumePdf: "./public/assets/docs/Saleh_Hammad_Flutter_Developer_Resume.pdf",
     availability: "Available for contract, freelance projects, and full-time Flutter engineering roles."
   }
 };

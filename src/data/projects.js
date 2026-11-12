@@ -13,25 +13,41 @@ export const projects = [
     platform: "Mobile (Android & iOS) + Web",
     status: "Active Development",
     statusType: "active",
-    badge: "Active Monorepo (Production Landing Live)",
+    badge: "★ Featured Enterprise Monorepo (Production Landing Live)",
     logo: "./public/assets/images/elmam_project_logo.png",
     image: null,
     screenshots: [
       {
-        src: "./public/assets/images/elmam/elmam_teacher_1.jpg",
-        caption: "Teacher App — Student Rosters & QR Check-in"
+        src: "./public/assets/images/elmam/elmam_home_dashboard.jpg",
+        caption: "Teacher App — Course Dashboard & Cohort Overview"
       },
       {
-        src: "./public/assets/images/elmam/elmam_teacher_2.jpg",
-        caption: "Teacher App — Active Session & Cohort Schedule"
+        src: "./public/assets/images/elmam/elmam_teacher_revenue.jpg",
+        caption: "Teacher App — Real-time Revenue & Group Earnings"
       },
       {
-        src: "./public/assets/images/elmam/elmam_student_1.jpg",
-        caption: "Student App — Enrolled Courses & Attendance"
+        src: "./public/assets/images/elmam/elmam_payment_monitoring.png",
+        caption: "Financial Hub — BaridiMob Payments & Verification"
       },
       {
-        src: "./public/assets/images/elmam/elmam_student_2.jpg",
-        caption: "Student App — Live Lectures & Notifications"
+        src: "./public/assets/images/elmam/elmam_lesson_timetable.png",
+        caption: "LMS Engine — Live Lesson Schedule & Cohort Sessions"
+      },
+      {
+        src: "./public/assets/images/elmam/elmam_cohort_qr_code.png",
+        caption: "Instant QR Attendance Scanning & Cohort Access"
+      },
+      {
+        src: "./public/assets/images/elmam/elmam_student_roster.png",
+        caption: "Student Registry — Enrolled Profiles & Roster Management"
+      },
+      {
+        src: "./public/assets/images/elmam/elmam_student_dashboard.jpg",
+        caption: "Student App — Enrolled Cohorts & Live Courses"
+      },
+      {
+        src: "./public/assets/images/elmam/elmam_teacher_session.jpg",
+        caption: "Teacher App — Active Classroom Session & Attendance"
       }
     ],
     liveUrl: "https://hammadsaleh631-lgtm.github.io/elmam-landing/",
@@ -92,6 +108,10 @@ export const projects = [
       {
         src: "./public/assets/images/pos/pos_screen_4.jpg",
         caption: "Order History & Digital Receipt Record"
+      },
+      {
+        src: "./public/assets/images/pos/pos_screen_5.jpg",
+        caption: "Inventory Management — Local Stock Level Controls"
       }
     ],
     liveUrl: null,
@@ -134,8 +154,17 @@ export const projects = [
     statusType: "active",
     badge: "Desktop Application (v1.0.0)",
     logo: null,
-    image: "./public/assets/images/Screenshot 2026-08-10 105802.png",
-    screenshots: [],
+    image: "./public/assets/images/veterp/veterp_screen_1.png",
+    screenshots: [
+      {
+        src: "./public/assets/images/veterp/veterp_screen_1.png",
+        caption: "Clinic Workstation — Patient Treatment Records & Dosage"
+      },
+      {
+        src: "./public/assets/images/veterp/veterp_screen_2.png",
+        caption: "Relational Engine — SQLite FFI Multi-table Dashboard"
+      }
+    ],
     liveUrl: null,
     liveLabel: null,
     repository: {
@@ -176,8 +205,25 @@ export const projects = [
     statusType: "prototype",
     badge: "Desktop Application (v0.1.0)",
     logo: null,
-    image: null,
-    screenshots: [],
+    image: "./public/assets/images/baconhands/baconhands_screen_1.png",
+    screenshots: [
+      {
+        src: "./public/assets/images/baconhands/baconhands_screen_1.png",
+        caption: "Windows Fluent UI — Desktop Study Workstation"
+      },
+      {
+        src: "./public/assets/images/baconhands/baconhands_screen_2.png",
+        caption: "MediaKit Hardware Video — Low-latency Offline Playback"
+      },
+      {
+        src: "./public/assets/images/baconhands/baconhands_screen_3.png",
+        caption: "LaTeX Scientific Typesetting — Physics & Calculus Formulas"
+      },
+      {
+        src: "./public/assets/images/baconhands/baconhands_screen_4.png",
+        caption: "Interactive 3D Revision Flashcards Module"
+      }
+    ],
     liveUrl: null,
     liveLabel: null,
     repository: {

@@ -101,6 +101,21 @@ def main():
             
     check_js_imports()
     
+    # Check project asset references in data/projects.js
+    projects_file = ROOT / "src" / "data" / "projects.js"
+    if projects_file.exists():
+        p_content = projects_file.read_text(encoding="utf-8")
+        for match in re.finditer(r'["\'](\./public/assets/[^"\']+)["\']', p_content):
+            ref_path = match.group(1)
+            check_file_exists(ref_path, "projects.js")
+
+    # Check that Resume PDF exists and is non-empty
+    resume_pdf = ROOT / "public" / "assets" / "docs" / "Saleh_Hammad_Flutter_Developer_Resume.pdf"
+    if not resume_pdf.exists() or resume_pdf.stat().st_size < 1000:
+        FAILURES.append("Resume PDF missing or invalid size")
+    else:
+        CHECKS_PASSED += 1
+    
     # Check essential GitHub Pages artifacts
     for required in [".nojekyll", "README.md"]:
         if not (ROOT / required).exists():
